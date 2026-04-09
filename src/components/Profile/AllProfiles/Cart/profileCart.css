@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500&display=swap');
+
+:root {
+    --accent: #a78bfa;
+    --accent-dim: rgba(167, 139, 250, 0.18);
+    --accent-border: rgba(167, 139, 250, 0.35);
+    --green: #5ef5a0;
+    --green-dim: rgba(94, 245, 160, 0.15);
+    --green-border: rgba(94, 245, 160, 0.3);
+    --white: #ffffff;
+    --white-60: rgba(255, 255, 255, 0.6);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-10: rgba(255, 255, 255, 0.1);
+    --white-06: rgba(255, 255, 255, 0.06);
+}
+
+/* ── CARD ── */
+.profile-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Outfit', sans-serif;
+}
+
+.card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a2e;
+    filter: brightness(0.28) saturate(0.8);
+    transition: filter 0.4s ease;
+    z-index: 0;
+}
+
+.profile-card:hover .card-bg {
+    filter: brightness(0.38) saturate(1);
+}
+
+.card-glass {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(8, 8, 20, 0.72) 0%,
+            rgba(14, 12, 32, 0.60) 50%,
+            rgba(8, 8, 20, 0.80) 100%);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    z-index: 2;
+}
+
+.card-content {
+    position: relative;
+    z-index: 3;
+    padding: 22px 22px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* ── AVATAR ── */
+.avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.avatar-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.avatar-wrap:hover .avatar-img {
+    transform: scale(1.05);
+}
+
+.frame-img {
+    position: absolute;
+    inset: -16px;
+    width: 122px;
+    height: 122px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* ── INFO ── */
+.card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.nickname {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.realname {
+    font-size: 13px;
+    color: var(--white-40);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.state-badge {
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid var(--green-border);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* ── META PILLS ── */
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--white-60);
+    background: var(--white-06);
+    border: 1px solid var(--white-10);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.pill-icon {
+    width: 11px;
+    height: 11px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.no-info {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.22);
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+/* ── LEVEL ── */
+.level-section {
+    margin-bottom: 10px;
+}
+
+.level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.level-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--white-40);
+}
+
+.level-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.level-bar-bg {
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.level-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #7c5af5, #a78bfa, #c4b5fd);
+    position: relative;
+    transition: width 0.6s ease;
+}
+
+.level-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(2px);
+}
+
+/* ── DESCRIPTION ── */
+.description {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.42);
+    line-height: 1.65;
+    border-top: 1px solid var(--white-10);
+    padding-top: 10px;
+}
+
+/* ── FOOTER LINE ── */
+.card-footer-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-border), transparent);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-card:hover .card-footer-line {
+    opacity: 1;
+}
+
+/* ── GRID (para ProfileList) ── */
+.cardsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}

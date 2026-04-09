@@ -1,259 +1,259 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            background: black;
-        }
-
-        .bg-image {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 71%;
-            object-fit: cover;
-            z-index: -2;
-            
-        }
-
-        .bg-fade {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 71%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 75%, black 100%);
-            z-index: -1;
-        }
-
-        /*******/
-
-        @keyframes dropDown {
-            from { transform: translateY(-80px); opacity: 0; }
-            to   { transform: translateY(0);    opacity: 1; }
-        }
-
-        @keyframes fadeUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to   { transform: translateY(0);    opacity: 1; }
-        }
-
-        /*******/
-
-        .profile-container {
-            width: 51%;
-            max-width: 1100px;
-            margin-top: 9%;
-            margin-bottom: 28px;
-            padding: 40px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-between;
-            backdrop-filter: blur(20px);
-            background: rgba(0, 0, 0, 0.12);
-            box-shadow: 2px 20px 40px rgba(0, 0, 0, 0.4);
-            color: #ffffff;
-            animation: fadeUp 0.9s ease-out 0.2s both;
-        }
-
-        .total-block {
-            width: 100%;
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
-
-        .avatar-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-        }
-
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.1);
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .marco-img {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-        }
-
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+.bg-image {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 71%;
+    object-fit: cover;
+    z-index: -2;
 }
 
-        .button-profile {
-            padding: 5px 20px;
-            border-radius: 12px;
-            margin: 6px;
-            background: linear-gradient(90deg, #06BFFF, #2D73FF);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.bg-fade {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 71%;
+    background: linear-gradient(
+    to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.7) 75%,
+    black 100%
+);
+    z-index: -1;
+}
 
-        .button-profile:hover {
-            transition: 0.3s;
-            background: rgba(255, 255, 255, 0);
-        }
+@keyframes dropDown {
+    from {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-        .user-info {
-            flex: 1;
-            margin-left: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-        .user-info h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 700;
-        }
+/*******/
 
-        .user-sub {
-            display: block;
-            opacity: 0.7;
-            margin-bottom: 8px;
-        }
+.profile-container {
+  width: 51%;
+  max-width: 1100px;
+  margin-top: 9%;
+  margin-bottom: 28px;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 20px 40px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  animation: fadeUp 0.9s ease-out 0.2s both;
+}
 
-        .user-status {
-            font-size: 14px;
-            opacity: 0.8;
-        }
+.total-block {
+  width: 100%;
+}
 
-        .level-box {
-            text-align: center;
-            flex-shrink: 0;
-        }
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
 
-        .level-circle {
-            margin-top: 8px;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-        }
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
-        .buton-profile {
-            padding: 10px 20px;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0);
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  flex-shrink: 0;
+}
 
-        .buton-profile:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+.marco-img {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
 
-        .section {
-            margin-bottom: 25px;
-        }
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-        .section h2 {
-            margin-bottom: 15px;
-            font-weight: 500;
-            opacity: 0.9;
-            font-size: 15px;
-        }
+.button-profile {
+  padding: 5px 20px;
+  border-radius: 12px;
+  margin: 6px;
+  background: linear-gradient(90deg, #06bfff, #2d73ff);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-        .section input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 12px;
-            border: none;
-            outline: none;
-            background: rgba(255,255,255,0.08);
-            color: white;
-        }
+.button-profile:hover {
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0);
+}
 
-        /* extras */
-        .divider {
-            height: 1px;
-            background: rgba(255,255,255,0.08);
-            margin: 20px 0;
-        }
+.user-info {
+  flex: 1;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-        .level-label {
-            font-size: 11px;
-            opacity: 0.55;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+.user-info h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+}
 
-        .info-row {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 8px;
-        }
+.user-sub {
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
 
-        .info-pill {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.1);
-            opacity: 0.85;
-        }
+.user-status {
+  font-size: 14px;
+  opacity: 0.8;
+}
 
-        .status-pill {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            background: rgba(76, 255, 136, 0.12);
-            border: 1px solid rgba(76, 255, 136, 0.3);
-            color: #4cff88;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
+.level-box {
+  text-align: center;
+  flex-shrink: 0;
+}
 
-        .status-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #4cff88;
-        }
+.level-circle {
+  margin-top: 8px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
 
-        .description-box {
-            padding: 14px 16px;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            font-size: 13px;
-            line-height: 1.65;
-            opacity: 0.8;
-        }
+.buton-profile {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.buton-profile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.section input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+/* extras */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px 0;
+}
+
+.level-label {
+  font-size: 11px;
+  opacity: 0.55;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.info-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.info-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.85;
+}
+
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: rgba(76, 255, 136, 0.12);
+  border: 1px solid rgba(76, 255, 136, 0.3);
+  color: #4cff88;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4cff88;
+}
+
+.description-box {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  line-height: 1.65;
+  opacity: 0.8;
+}
